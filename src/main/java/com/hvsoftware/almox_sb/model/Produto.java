@@ -1,8 +1,6 @@
-package model;
+package com.hvsoftware.almox_sb.model;
 
 import jakarta.persistence.*;
-
-import java.util.List;
 
 @Entity
 @Table(name = "produtos")

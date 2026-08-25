@@ -1,4 +1,4 @@
-package model;
+package com.hvsoftware.almox_sb.model;
 
 public enum Categoria {
     ALIMENTOS,

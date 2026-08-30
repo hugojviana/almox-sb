@@ -2,6 +2,7 @@ package com.hvsoftware.almox_sb.controller;
 
 
 import com.hvsoftware.almox_sb.dto.ProdutoDTO;
+import com.hvsoftware.almox_sb.dto.RequisicaoDTO;
 import com.hvsoftware.almox_sb.service.ProdutoService;
 import com.hvsoftware.almox_sb.service.RequisicaoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class ProdutoController {
     }
 
     @GetMapping("/requisicoes")
-    public List<> listarRequisicoes(){
-        return
+    public List<RequisicaoDTO> listarRequisicoes(){
+        return requisicaoService.listarRequisicoes();
     }
 }

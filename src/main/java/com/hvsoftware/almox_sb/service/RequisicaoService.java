@@ -3,10 +3,12 @@ package com.hvsoftware.almox_sb.service;
 import com.hvsoftware.almox_sb.dto.RequisicaoDTO;
 import com.hvsoftware.almox_sb.repository.RequisicaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class RequisicaoService {
 
     @Autowired

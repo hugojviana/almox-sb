@@ -12,12 +12,13 @@ public class Produto {
 
     private String nome;
     private Double quantidade;
+    private String unidadeDeMedida;
     private Double quantidadeMinima;
     private Double preco;
 
     @Enumerated(EnumType.STRING)
     private Categoria categoria;
-    private String unidadeDeMedida;
+
 
     public Long getId() {
         return id;

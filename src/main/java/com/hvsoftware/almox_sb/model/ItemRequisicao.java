@@ -16,6 +16,14 @@ public class ItemRequisicao {
     private Requisicao requisicao;
     private Double quantidade;
 
+    public ItemRequisicao(Produto produto, Requisicao requisicao, Double quantidade) {
+        this.produto = produto;
+        this.requisicao = requisicao;
+        this.quantidade = quantidade;
+    }
+
+    public ItemRequisicao(){}
+
     public Long getId() {
         return id;
     }

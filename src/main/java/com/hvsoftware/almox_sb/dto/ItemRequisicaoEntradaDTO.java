@@ -1,4 +1,4 @@
 package com.hvsoftware.almox_sb.dto;
 
-public record ItemRequisicaoEntrada(Long id, Double quantidade) {
+public record ItemRequisicaoEntradaDTO(Long produtoId, Double quantidade) {
 }

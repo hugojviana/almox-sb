@@ -25,7 +25,7 @@ public class ProdutoController {
     @Autowired
     private RequisicaoService requisicaoService;
 
-    @GetMapping("/listar")
+    @GetMapping("/produtos/listar")
     public List<ProdutoDTO> listarTodos(){
         return produtoService.listarTodos();
     }

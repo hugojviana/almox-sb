@@ -43,10 +43,8 @@ public class RequisicaoService {
     }
 
     public void requisitar(RequisicaoEntradaDTO requisicaoEntradaDTO) {
-        List<Produto> produtoRequisitados = new ArrayList<>();
+
         List<ItemRequisicao> itemListaRequisicao = new ArrayList<>();
-
-
         Requisicao requisicao = new Requisicao();
         requisicao.setDataHora(LocalDateTime.now());
         requisicao.setSetorRequisitante(requisicaoEntradaDTO.setorRequisitante());
@@ -65,11 +63,10 @@ public class RequisicaoService {
         for(ItemRequisicaoEntradaDTO item : requisicaoEntradaDTO.itens()){
             var produtoOptional = produtoRepository.findById(item.produtoId());
             var produtoEncontrado = produtoOptional.get();
-
             var novaQuantidade = produtoEncontrado.getQuantidade()-item.quantidade();
+
             produtoEncontrado.setQuantidade(novaQuantidade);
             produtoRepository.save(produtoEncontrado);
-            produtoRequisitados.add(produtoEncontrado);
 
             ItemRequisicao itemRequisicao = new ItemRequisicao();
             itemRequisicao.setRequisicao(requisicao);

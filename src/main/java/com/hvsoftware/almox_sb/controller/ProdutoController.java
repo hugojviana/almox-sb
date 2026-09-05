@@ -2,6 +2,7 @@ package com.hvsoftware.almox_sb.controller;
 
 
 import com.hvsoftware.almox_sb.dto.ProdutoDTO;
+import com.hvsoftware.almox_sb.dto.ProdutoEntradaDTO;
 import com.hvsoftware.almox_sb.dto.RequisicaoDTO;
 import com.hvsoftware.almox_sb.dto.RequisicaoEntradaDTO;
 import com.hvsoftware.almox_sb.service.ProdutoService;
@@ -37,6 +38,12 @@ public class ProdutoController {
     @PostMapping("/requisicoes/salvar")
     public ResponseEntity<Void> fazerRequisicao(@RequestBody RequisicaoEntradaDTO requisicaoEntradaDTO){
         requisicaoService.requisitar(requisicaoEntradaDTO);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    @PostMapping("/produtos/salvar")
+    public ResponseEntity<Void> salvarProdutos(@RequestBody ProdutoEntradaDTO produtoEntradaDTO){
+        produtoService.salvar(produtoEntradaDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
